@@ -1,0 +1,3 @@
+#!/bin/bash
+g++ Aminus_publish.cpp GPIO.cpp -o Aminus_publish -lpaho-mqtt3c
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+config-pin p8.16 gpio_pu
+config-pin p9.12 gpio
+
+g++ Step_1_2_publish.cpp AnalogIn.cpp -o publish -lpaho-mqtt3c
+g++ Step_1_2_subscribe.cpp LED.cpp -o subscribe -lpaho-mqtt3c
+
+g++ textbox_subscribe.cpp textbox_LED.cpp -o textbox_subscribe -lpaho-mqtt3c
+
+g++ Push_publish.cpp GPIO.cpp -o Push_publish -lpaho-mqtt3c
+
+g++ LED_subscribe.cpp LED_GPIO.cpp -o LED_subscribe -lpaho-mqtt3c
+

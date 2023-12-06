@@ -1,0 +1,3 @@
+#!/bin/bash
+g++ Aminus_subscribe.cpp LED.cpp -o Aminus_subscribe -lpaho-mqtt3c
+
